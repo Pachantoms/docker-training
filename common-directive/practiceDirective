@@ -1,0 +1,7 @@
+ARG TAG=latest
+FROM ubuntu:$TAG
+ARG DEBIAN_FRONTEND=non_interactive
+RUN apt-get update && apt-get install apache2 -y
+ENV PATH=$PATH:/ VERSION1=10.5
+WORKDIR /var/www/html/
+RUN pwd
