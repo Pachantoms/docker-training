@@ -1,0 +1,15 @@
+docker network ls
+docker run -d -p 8080:80 --name nginx nginx:latest
+docker ps
+docker inspect nginx
+docker build -t network .
+docker run -it network
+ping google.com
+CTRL+p CTRL+q
+ip addr show
+ping 172.17.0.3
+arp-scan --interface=eth0 --localnet
+docker run -d --network=host --name nginx nginx:latest
+docker run -itd --network host --name hostnet nginx:latest
+docker run -it --network=none network
+
