@@ -1,0 +1,41 @@
+docker-compose up -d
+
+docker network ls
+
+
+docker network inspect wordpress-mysql_default | grep 172
+
+docker container ps
+
+docker container inspect wordpress-mysql_wordpress_1 | grep 172
+
+
+
+docker exec -it wordpress-mysql_db_1 bash
+
+mysql -u wordpress -h localhost wordpress -p
+
+
+show databases;
+
+show tables
+
+
+select * from wp_users;
+
+exit
+
+docker-compose down
+
+docker volume ls
+
+docker network ls
+
+docker-compose restart
+
+docker-compose start
+
+docker-compose stop
+
+docker-compose down
+
